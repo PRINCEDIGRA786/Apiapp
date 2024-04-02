@@ -23,10 +23,11 @@ const arraysAreEqual = async (arr1, arr2) => {
 
     return true;
 }
+require('dotenv').config();
 const getApi = async (req, res) => {
     try {
 
-        const apiKey = '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'; // Replace with your actual OpenAI API key
+        const apiKey = process.env.API_KEY; // Replace with your actual OpenAI API key
 
         const { apiname, fields, number } = req.body;
 
