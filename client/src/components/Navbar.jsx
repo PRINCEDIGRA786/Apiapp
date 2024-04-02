@@ -1,29 +1,3 @@
-// import React from 'react'
-
-// export default function Navbar() {
-//   return (
-//     <>
-//     <div className='p-2 flex justify-evenly'>
-//         <div className='flex'>
-//             <h1 className='font-extrabold font-alfa text-2xl'>ApiCustomiZer</h1>
-//             <p className=' text-red-600 font-extrabold text-2xl '>.</p>
-//         </div>
-//         <div>
-//         <ul className='flex text-black font-extrabold text-md space-x-20 pt-1'>
-//             <li className='hover:underline cursor-pointer '>Home</li>
-//             <li className='hover:underline cursor-pointer '>About Us</li>
-//             <li className='hover:underline cursor-pointer '>Contact</li>
-//             <li className='hover:underline cursor-pointer '>Favourite</li>
-//             <li className='hover:underline cursor-pointer '></li>
-//         </ul>
-
-//         </div>
-//     </div>
-      
-//     </>
-//   )
-// }
-
 
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -40,7 +14,7 @@ const Navbar = () => {
     setIsExpanded(!isExpanded);
   };
   const handleClick=async()=>{
-    const response = await fetch("http://localhost:5000/api/auth/getuser", {
+    const response = await fetch("https://apiapp-backend.vercel.app/api/auth/getuser", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
                 "Content-Type": "application/json",
