@@ -11,7 +11,7 @@ export default function ApiState(props) {
     // To get the api:
     const getApi = async (apiname, inputFields, number) => {
         const fields = await inputFields ? (inputFields.filter(entry => entry.trim() !== '')) : inputFields;
-        const response = await fetch("http://localhost:5000/api/api/getapi", {
+        const response = await fetch("https://apiapp-backend.vercel.app/api/api/getapi", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
                 "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export default function ApiState(props) {
 
     const putLink = async (url) => {
         // await console.log(apidata.apiname, apidata.fields, apidata.dataArray);
-        const response = await fetch("http://localhost:5000/api/api/putlink", {
+        const response = await fetch("https://apiapp-backend.vercel.app/api/api/putlink", {
             method: "PUT", // *GET, POST, PUT, DELETE, etc.
             headers: {
                 "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export default function ApiState(props) {
 
     //For creating a new user:
     const createuser = async (formData) => {
-        const response = await fetch("http://localhost:5000/api/auth/createuser", {
+        const response = await fetch("https://apiapp-backend.vercel.app/api/auth/createuser", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
                 "Content-Type": "application/json",
@@ -116,7 +116,7 @@ export default function ApiState(props) {
 
     //For creating a new user:
     const login = async (formData) => {
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("https://apiapp-backend.vercel.app/api/auth/login", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
                 "Content-Type": "application/json",
@@ -140,7 +140,7 @@ export default function ApiState(props) {
 
     const dashboard = async (requiredfor, profession, profilepic) => {
         // await console.log(requiredfor, profession)
-        const response = await fetch("http://localhost:5000/api/auth/profile", {
+        const response = await fetch("https://apiapp-backend.vercel.app/api/auth/profile", {
             method: "PUT", // *GET, POST, PUT, DELETE, etc.
             headers: {
                 "Content-Type": "application/json",
