@@ -13,7 +13,7 @@ const YourReactComponent = () => {
     if(!Api){
       getApi(apiData.apiname,apiData.fields,apiData.number);
     }
-  },[Api])
+  })
 
 
 
