@@ -9,6 +9,9 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 app.use(cors());
+app.use(cors({
+    origin: 'https://apiapp-frontend.vercel.app'
+}));
 app.use(express.json())//let the use of req.body
 
 app.use('/api/auth', require('./routes/auth'));
